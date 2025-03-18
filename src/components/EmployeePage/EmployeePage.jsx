@@ -3,6 +3,7 @@ import styled from "styled-components";
 const StyledEmployeePage = styled.section`
   max-width: 400px;
   margin-left: 4rem;
+  margin-top: 4rem;
 `;
 
 const StyledEmployeeCard = styled.div`

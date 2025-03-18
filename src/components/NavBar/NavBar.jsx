@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledNav = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: #2196f3;
   padding: 20px 15px;
-  margin-bottom: 4rem;
   color: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 `;
@@ -24,10 +24,10 @@ function NavBar() {
     <StyledNav>
       <h2>Employees</h2>
       <StyledMenu>
-        <li>HOME</li>
-        <li>ADD EMPLOYEES</li>
-        <li>EMPLOYEE LIST</li>
-        <li>LOG OUT</li>
+        <Link to="/">HOME</Link>
+        <Link to="add-employee">ADD EMPLOYEES</Link>
+        <Link to="employee-list">EMPLOYEE LIST</Link>
+        <Link to="login">LOG OUT</Link>
       </StyledMenu>
     </StyledNav>
   );
