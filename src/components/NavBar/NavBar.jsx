@@ -27,6 +27,7 @@ function NavBar() {
         <Link to="/">HOME</Link>
         <Link to="add-employee">ADD EMPLOYEES</Link>
         <Link to="employee-list">EMPLOYEE LIST</Link>
+        <Link to="countries">COUNTRIES</Link>
         <Link to="login">LOG OUT</Link>
       </StyledMenu>
     </StyledNav>

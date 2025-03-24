@@ -6,11 +6,7 @@ const StyledSearchBar = styled.input`
 `;
 
 function SearchBar() {
-  return (
-    <>
-      <StyledSearchBar />
-    </>
-  );
+  return <StyledSearchBar />;
 }
 
 export default SearchBar;

@@ -1,6 +1,3 @@
-import Header from "../Header/Header";
-import SearchBar from "../SearchBar/SearchBar";
-import EmployeeList from "../EmployeeList/EmployeeList";
 import styled from "styled-components";
 import HeroImage from "../../assets/hero.avif";
 
@@ -31,7 +28,6 @@ const StyledButton = styled.button`
 `;
 
 function HomePage(props) {
-  console.log("props", props);
   return (
     <>
       <img width="100%" src={HeroImage} alt="" />

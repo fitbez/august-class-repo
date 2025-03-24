@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useContext } from "react";
+import { EmployeeContext } from "../../employeeContext";
 
 const StyledEmployeePage = styled.section`
   max-width: 400px;
@@ -28,12 +30,14 @@ const StyledParagraph = styled.p`
   font-size: 0.8rem;
 `;
 
-function EmployeePage(props) {
+function EmployeePage() {
+  const { employeeList } = useContext(EmployeeContext);
+
   return (
     <StyledEmployeePage>
-      {props.employeeData.map((employee) => {
+      {employeeList.map((employee) => {
         return (
-          <StyledEmployeeCard>
+          <StyledEmployeeCard key={employee.id}>
             <StyledImage src={employee.profilePicture} alt="" />
             <div>
               <h4>{employee.name}</h4>
