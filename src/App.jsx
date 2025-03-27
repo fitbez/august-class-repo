@@ -1,4 +1,3 @@
-import "./App.css";
 import HomePage from "./components/HomePage/HomePage";
 import EmployeePage from "./components/EmployeePage/EmployeePage";
 import NavBar from "./components/NavBar/NavBar";

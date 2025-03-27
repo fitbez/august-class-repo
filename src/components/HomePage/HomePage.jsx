@@ -17,13 +17,13 @@ const StyleParagraph = styled.p`
   text-align: center;
 `;
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   padding: 10px 15px;
   color: #fff;
   background: #2196f3;
   border: none;
   border-radius: 4px;
-  width: 250px;
+  width: 100%;
   margin-top: 1rem;
 `;
 
