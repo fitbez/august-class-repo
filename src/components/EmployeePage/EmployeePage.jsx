@@ -30,14 +30,17 @@ const StyledParagraph = styled.p`
   font-size: 0.8rem;
 `;
 
-function EmployeePage() {
+function EmployeePage(props) {
   const { employeeList } = useContext(EmployeeContext);
 
   return (
     <StyledEmployeePage>
       {employeeList.map((employee) => {
         return (
-          <StyledEmployeeCard key={employee.id}>
+          <StyledEmployeeCard
+            key={employee.id}
+            onClick={() => props.handleEmployeeId(employee.id)}
+          >
             <StyledImage src={employee.profilePicture} alt="" />
             <div>
               <h4>{employee.name}</h4>

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const StyledNav = styled.div`
   display: flex;
@@ -17,18 +17,30 @@ const StyledMenu = styled.ul`
   align-items: center;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+`;
+
 function NavBar() {
+  const navigate = useNavigate();
+
+  const handleLogo = () => {
+    navigate("/");
+  };
   return (
     //React Fragment <></> (React.Fragment)
     // using a wrapper div
     <StyledNav>
-      <h2>Employees</h2>
+      <h2 onClick={handleLogo} style={{ cursor: "pointer" }}>
+        Employees
+      </h2>
       <StyledMenu>
-        <Link to="/">HOME</Link>
-        <Link to="add-employee">ADD EMPLOYEES</Link>
-        <Link to="employee-list">EMPLOYEE LIST</Link>
-        <Link to="countries">COUNTRIES</Link>
-        <Link to="login">LOG OUT</Link>
+        <StyledLink to="/">HOME</StyledLink>
+        <StyledLink to="add-employee">ADD EMPLOYEES</StyledLink>
+        <StyledLink to="employee-list">EMPLOYEE LIST</StyledLink>
+        <StyledLink to="countries">COUNTRIES</StyledLink>
+        <StyledLink to="login">LOG OUT</StyledLink>
       </StyledMenu>
     </StyledNav>
   );

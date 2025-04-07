@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import AddEmployee from "./components/AddEmployee/AddEmployee";
 import Countries from "./components/Countries/Countries";
+import EmployeeList from "./components/EmployeeList/EmployeeList";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="add-employee" element={<AddEmployee />} />
-          <Route path="employee-list" element={<EmployeePage />} />
+          <Route path="employee-list" element={<EmployeeList />} />
           <Route path="login" element={<Login />} />
           <Route path="countries" element={<Countries />} />
         </Routes>
