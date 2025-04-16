@@ -43,50 +43,54 @@ const EmployeeDetail = (props) => {
     (employee) => employee.id === props.employeeId
   );
 
-  console.log("employee  detail", employeeDetail);
+  if (!props.employeeId) {
+    return;
+  }
 
   return (
     <StyledEmployeeDetailCard>
-      <StyledEmployeeDetail>
-        <StyledProfile>
-          <StyledImage src={employeeDetail.profilePicture} alt="" />
-          <p>
-            <strong>{employeeDetail.name}</strong>
-          </p>
-        </StyledProfile>
-        <hr />
-        <div>
-          <StyledDetailContent>
+      {employeeList && (
+        <StyledEmployeeDetail>
+          <StyledProfile>
+            <StyledImage src={employeeDetail.profilePicture} alt="" />
             <p>
-              <strong>Occupation</strong>
+              <strong>{employeeDetail.name}</strong>
             </p>
-            <StyledParagraph>{employeeDetail.occupation}</StyledParagraph>
-          </StyledDetailContent>
+          </StyledProfile>
           <hr />
-          <StyledDetailContent>
-            <p>
-              <strong>Call Mobile</strong>
-            </p>
-            <StyledParagraph>{employeeDetail.callMobile}</StyledParagraph>
-          </StyledDetailContent>
-          <hr />
+          <div>
+            <StyledDetailContent>
+              <p>
+                <strong>Occupation</strong>
+              </p>
+              <StyledParagraph>{employeeDetail.occupation}</StyledParagraph>
+            </StyledDetailContent>
+            <hr />
+            <StyledDetailContent>
+              <p>
+                <strong>Call Mobile</strong>
+              </p>
+              <StyledParagraph>{employeeDetail.callMobile}</StyledParagraph>
+            </StyledDetailContent>
+            <hr />
 
-          <StyledDetailContent>
-            <p>
-              <strong>Call Office</strong>
-            </p>
-            <StyledParagraph>{employeeDetail.callOffice}</StyledParagraph>
-          </StyledDetailContent>
-          <hr />
+            <StyledDetailContent>
+              <p>
+                <strong>Call Office</strong>
+              </p>
+              <StyledParagraph>{employeeDetail.callOffice}</StyledParagraph>
+            </StyledDetailContent>
+            <hr />
 
-          <StyledDetailContent>
-            <p>
-              <strong>Email</strong>
-            </p>
-            <StyledParagraph>{employeeDetail.email}</StyledParagraph>
-          </StyledDetailContent>
-        </div>
-      </StyledEmployeeDetail>
+            <StyledDetailContent>
+              <p>
+                <strong>Email</strong>
+              </p>
+              <StyledParagraph>{employeeDetail.email}</StyledParagraph>
+            </StyledDetailContent>
+          </div>
+        </StyledEmployeeDetail>
+      )}
     </StyledEmployeeDetailCard>
   );
 };
